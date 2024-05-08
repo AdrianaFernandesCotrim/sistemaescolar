@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import cores from './cores.jpg'
+import "./App.css"
+import { useState } from "react";
+// import Contador from "./Contador";
+// import Inputvalor from "./Input";
+import Login from "./Login";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+function Home(){
+
+  const [mensagem, setMensagem] = useState('')
+
+  function handleClick(){
+    setMensagem('O botão foi clicado!')
+  }
+
+  return(
+    <>
+    <Login/>
+
+    {/*<Inputvalor/>
+    <Contador/>
+    <h1>Hello World! Jesus te ama!</h1>
+
+    <button onClick= {handleClick}>Contador</button>
+
+
+    <p>{mensagem}</p>
+    <button onClick={handleClick}></button>
+  <img src={cores} alt=""/>*/}
+    </>
+  )
 }
+export default Home
 
-export default App;
+
